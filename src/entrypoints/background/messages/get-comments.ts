@@ -59,7 +59,7 @@ async function getRedditThread(
 	sort: string,
 ): Promise<FetchResponse<Replies>> {
 	const response = await requestJson(
-		`${REDDIT_API_DOMAIN}/comments/${threadId}?sort=${sort}&raw_json=1`,
+		`${REDDIT_API_DOMAIN}/comments/${threadId}.json?sort=${sort}&raw_json=1`,
 		redditCommentsResponseSchema,
 	);
 

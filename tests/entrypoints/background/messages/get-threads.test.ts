@@ -135,7 +135,7 @@ describe("getThreads", () => {
 		expect(mockedImportedGetValue).toHaveBeenCalledWith(Settings.INCLUDENSFW);
 		expect(mockedImportedRequestJson).toHaveBeenCalledWith(
 			expect.objectContaining({
-				hostname: "api.reddit.com",
+				hostname: "www.reddit.com",
 				pathname: "/search.json",
 			}),
 			expect.anything(),

@@ -1,4 +1,4 @@
-const REDDIT_API_DOMAIN = "https://api.reddit.com";
+const REDDIT_API_DOMAIN = "https://www.reddit.com";
 const REDDIT_LINK_DOMAIN = "https://www.reddit.com";
 
 const Interactions = {

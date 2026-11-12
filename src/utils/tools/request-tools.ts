@@ -88,7 +88,7 @@ function getRedditLoginRequiredErrorMessage() {
 }
 
 function getResponseErrorMessage(url: string, response: Response) {
-	if (new URL(url).hostname === "api.reddit.com" && response.status === 403) {
+	if (new URL(url).hostname === "www.reddit.com" && response.status === 403) {
 		return getRedditLoginRequiredErrorMessage();
 	}
 
@@ -159,12 +159,18 @@ async function requestCatch(
 		requestInit.method = config.method;
 	}
 
+	const requestUrl = new URL(url);
+
+	if (requestUrl.hostname === "www.reddit.com") {
+		requestUrl.searchParams.set("app", "res");
+	}
+
 	try {
-		const response = await fetch(url.toString(), requestInit);
+		const response = await fetch(requestUrl.toString(), requestInit);
 
 		if (!response.ok) {
 			return {
-				errorMessage: getResponseErrorMessage(url.toString(), response),
+				errorMessage: getResponseErrorMessage(requestUrl.toString(), response),
 				success: false,
 			};
 		}

@@ -13,7 +13,7 @@ export default defineConfig({
 		},
 		default_locale: "en",
 		description: "__MSG_extensionDescription__",
-		host_permissions: ["*://api.reddit.com/"],
+		host_permissions: ["*://www.reddit.com/"],
 		name: "__MSG_extensionName__",
 		optional_host_permissions: ["https://*/*"],
 		optional_permissions: ["tabs"],

@@ -221,7 +221,7 @@ describe("requestJson", () => {
 		);
 
 		await expect(
-			requestJson("https://api.reddit.com/comments/thread-id"),
+			requestJson("https://www.reddit.com/comments/thread-id"),
 		).resolves.toStrictEqual({
 			errorMessage: redditLoginRequiredErrorMessage,
 			success: false,
