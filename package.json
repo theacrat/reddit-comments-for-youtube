@@ -1,6 +1,6 @@
 {
 	"name": "reddit-comments-for-youtube",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"private": true,
 	"description": "Improve your YouTube (and Nebula) experience by adding a Reddit comment section to the site!",
 	"type": "module",
