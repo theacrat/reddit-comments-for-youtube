@@ -135,14 +135,14 @@ async function mapRedditQueries({
 	return site.domains.flatMap((domain, domainIndex) => {
 		const template = site.templates[domainIndex];
 
-		let query = `url:${videoId}+site:${domain}`;
+		let query = `url:${videoId} site:${domain}`;
 
 		if (site.id === SiteId.POPUP) {
 			if (!template) {
 				return [];
 			}
 
-			query = `url:${template.replace("videoId", videoId)}+site:${domain}`;
+			query = `url:${template.replace("videoId", videoId)} site:${domain}`;
 		}
 
 		const searchParams = new URLSearchParams({
